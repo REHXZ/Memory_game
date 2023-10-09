@@ -1,0 +1,40 @@
+html,body{
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+.container{
+  display: flex;
+  flex-direction: column;
+  max-width: 90%;
+  margin: 30px auto;
+}
+
+
+.add-button{
+  color: #FDFDFD;
+  background-color: rgb(206, 178, 178);
+
+  border: 0;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+p{
+  text-align: center;
+}
+
+.img{
+  display: flex;
+  justify-content: center;
+  width: 147px;
+  margin: 0 auto;
+}

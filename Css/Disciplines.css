@@ -1,0 +1,21 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(255, 255, 255);
+}
+
+.img
+
+.Discipline-button{
+  color: #FDFDFD;
+  background-color: rgb(240, 166, 221);
+
+  border: 0;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 20px;
+  text-align: left;
+  font-family: 'Roboto Condensed', sans-serif;
+  margin-top: 6px;
+  text-decoration: none;
+}
