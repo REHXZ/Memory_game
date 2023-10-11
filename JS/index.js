@@ -1,55 +1,24 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"
-import { getDatabase, ref, push, onValue } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
+const admin_field = document.getElementById("admin_no");
+const log_in_btn = document.getElementById("log-in-btn");
+const index_sign_up_btn = document.getElementById("sign-up-btn");
+const alert = document.getElementById("alert-message");
 
-const appSetting = {
-  databaseURL: "https://memory-practice-c35eb-default-rtdb.asia-southeast1.firebasedatabase.app/"
-}
-
-const app = initializeApp(appSetting)
-const database = getDatabase(app)
-const UsernameinDB = ref(database, 'Username')
-
-const inputFieldEl = document.getElementById("input-field")
-const addButtonEl = document.getElementById("add-button")
-const disciplinesEl = document.getElementById("disciplines")
-const alertEl = document.getElementById("alert-message"); // Add this line
-
-addButtonEl.addEventListener("click", function () {
-  const inputvalue = inputFieldEl.value.trim();
-  const inputvalue2 = inputFieldEl.value.trim();
-
-  // Check if the input is empty or contains non-alphabet characters
-  if (/^[A-Za-z]+$/.test(inputvalue) && /^[A-Za-z]+$/.test(inputvalue2)) {
-    push(UsernameinDB, inputvalue)
-    clearInputFieldEl()
-    window.location.href = 'Main.html';
-  } else {
-    // Display the alert message below the input field
-    alertEl.textContent = "Incorrect Password or Admin Number.";
-    clearInputFieldEl()
+log_in_btn.addEventListener("click", function() {
+  const admin_value = admin_field.value.trim();
+  if(admin_value == undefined || admin_value == null || admin_value == "" || admin_value != "Nig") {
+    alert.textContent = "Incorrect Admin number or Passoword";
+    clearinputfield();
   }
-})
+  else{
+    console.log("Admin Value: " + admin_value);
+    window.location.href = "Main.html";
+  }
+});
 
-// function clearList() {
-//   disciplinesEl.innerHTML = ""
-// }
+index_sign_up_btn.addEventListener("click", function() {
+  window.location.href = "signup.html";
+});
 
-function clearInputFieldEl() {
-  inputFieldEl.value = ""
+function clearinputfield(){
+  admin_field.value = "";
 }
-
-function AppendInput(inputvalue) {
-  disciplinesEl.innerHTML += `<p>${inputvalue}</p>`
-}
-
-
-// onValue(UsernameinDB, function(snapshot){
-//   let itemsArray = Object.values(snapshot.val())
-
-//   clearList()
-//   AppendInput(itemsArray)
-//   // for (let i = 0; i < itemsArray.length;i++){
-//   //   AppendInput(itemsArray[i])
-//   // }
-// })
-

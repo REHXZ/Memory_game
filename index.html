@@ -3,18 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="Css/style.css">
   <title>Memory game</title>
 </head>
 <body>
-  <div class="container">
-    <img src="images/img-6.png" alt="" class="img">
-    <p>Please enter your first name</p>
-    <input type="text" id="input-field" placeholder="Admin Number" class="input-field">
-    <input type="text" id="Password-field" placeholder="Password" class="input-field">
-    <button id="add-button" class="add-button">Log in</button>
-  </div>
-  <p id="alert-message" style="color: red;"></p>
+  <section class="vh-100">
+    <div class="container py-5 h-100">
+      <div class="row d-flex align-items-center justify-content-center h-100">
+        <div class="col-md-8 col-lg-7 col-xl-6">
+          <img src="images/img-6.png"
+            class="img-fluid" alt="Phone image">
+        </div>
+        <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+          <p>Please enter your Credentials:</p>
+            <!-- Admin input -->
+            <div class="form-outline mb-4">
+              <input type="text" id="admin_no" class="form-control form-control-lg input-field" placeholder="Admin Number"/>
+            </div>
+  
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+              <input type="password" id="Password-field" class="form-control form-control-lg input-field" placeholder="Password"/>
+            </div>
+
+            <!-- Sign up
+               and Login button -->
+            <div class="d-flex justify-content-center">
+              <button id="log-in-btn" class="btn btn-primary btn-lg btn-block mx-5" style="background-color: #55acee">Log in</button>
+              
+              <p class="pt-2">OR</p>
+
+              <button id="sign-up-btn" href="signup.html" class="btn btn-primary btn-lg btn-block mx-5" style="background-color: #55acee;">Sign Up</button>
+
+            </div>
+            <p id="alert-message" style="color: red;" class="pt-3 text-center"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <script src="JS/index.js" type="module"></script>
 </body>
 </html>
