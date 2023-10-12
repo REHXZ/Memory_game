@@ -9,6 +9,7 @@ async function getalluser(){
 }
 
 getalluser();
+insertuser();
 
 async function insertuser(){
   let { data, error } = await supabaseclient.from("user").insert([
