@@ -9,7 +9,11 @@ sign_up.addEventListener("click", function() {
   const passwd = sign_up_passwd.value.trim();
   const admin = sign_up_admin.value.trim();
   const name = sign_up_name.value.trim();
-  if(passwd == undefined || passwd == null || passwd == "" || admin == undefined || admin == null || admin == "" || name == undefined || name == null || name == "") {
-    alert.textContent = "Please fill all the fields";
+  if(passwd == undefined || passwd == null || passwd == "" || admin == undefined || admin == null || admin == "" || name == undefined || name == null || name == "" || admin.length != 7) {
+    alert.textContent = "Please fill up all the fields";
+  }
+  else{
+    alert.textContent = "";
+    window.location.href = "Main.html"
   }
 });
