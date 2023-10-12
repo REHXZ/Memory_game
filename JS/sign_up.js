@@ -21,11 +21,12 @@ sign_up.addEventListener("click",async function() {
       {
         admin_no: admin,
         name: name,
-        password: passwd,
-        wmsc_id: 123123
-      }
+        password: passwd
+      },
     ]);
+    console.log(error);
     alert.textContent = "";
-    window.location.href = "Main.html"
+    // window.location.href = "Main.html"
+    console.log(data);
   }
 });
