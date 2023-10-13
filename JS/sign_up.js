@@ -26,7 +26,7 @@ sign_up.addEventListener("click",async function() {
     ]);
     console.log(error);
     alert.textContent = "";
-    // window.location.href = "Main.html"
+    window.location.href = "Main.html"
     console.log(data);
   }
 });

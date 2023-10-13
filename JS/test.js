@@ -6,23 +6,8 @@ const supabaseclient = supabase.createClient(
 async function getalluser() {
 	let { data, error } = await supabaseclient
 		.from("user")
-		.select("admin_no,name");
+		.select("2348935,password");
 	console.log(data);
 }
-
-
-async function insertuser() {
-  let { data, error } = await supabaseclient.from("user").insert([
-    {
-      admin_no: "123452",
-      name: "adada",
-      password: "adada",
-      wmsc_id: "123451"
-    },
-  ]);
-  console.log(error);
-}
-
-insertuser();
 
 getalluser();
