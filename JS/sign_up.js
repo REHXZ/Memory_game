@@ -13,10 +13,7 @@ sign_up.addEventListener("click",async function() {
   const passwd = sign_up_passwd.value.trim();
   const admin = sign_up_admin.value.trim();
   const name = sign_up_name.value.trim();
-  if(passwd == undefined || passwd == null || passwd == "" || admin == undefined || admin == null || admin == "" || name == undefined || name == null || name == "" || admin.length != 7) {
-    alert.textContent = "Please fill up all the fields";
-  }
-  else{
+  if((admin.length == 7 && !isNaN(admin)) && passwd.length && name.length) {
     let { data, error } = await supabaseclient.from("user").insert([
       {
         admin_no: admin,
@@ -24,9 +21,14 @@ sign_up.addEventListener("click",async function() {
         password: passwd
       },
     ]);
-    console.log(error);
-    alert.textContent = "";
-    window.location.href = "Main.html"
-    console.log(data);
+    if(error){
+      alert.textContent = "This Admin Number already has Account (Please enter correct Number or contact person incharge)";
+    }
+    else{
+      window.location.href = "login.html"
+    }
   }
-});
+  else{
+    alert.textContent = "Please fill up all the fields";
+  }
+}); 
