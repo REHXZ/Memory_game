@@ -25,7 +25,7 @@ sign_up.addEventListener("click",async function() {
       alert.textContent = "This Admin Number already has Account (Please enter correct Number or contact person incharge)";
     }
     else{
-      window.location.href = "login.html"
+      window.location.href = "index.html"
     }
   }
   else{
