@@ -1,5 +1,14 @@
+// import { id } from './login.js'
+
+// console.log(id)
+
 const buttonElement = document.getElementById("Next");
 const MemoryPallairs = ["","Gantry","Servicee Staff","Top-up Counter","ATM","Seven-Eleven","Each a Cup","Fuji zerox?","Orange Juice","Link Bridge","Security Office / Gantry"];
+const end = document.getElementById("end-btn")
+
+end.addEventListener("click", function (){
+  window.location.href = 'Main.html'
+})
 
 var DigitsHolder = new Array();
 
