@@ -46,5 +46,3 @@ log_in_btn.addEventListener("click", async function(){
     id = ''
   }
 })
-
-// export var id;
