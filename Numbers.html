@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="Css/Number.css">
   <link rel="stylesheet" href="Css/button.css">
   <title>Numbers</title>
+  <script>
+    const Admin_Number = localStorage.getItem("Admin Number");
+    if (Admin_Number == null ||  Admin_Number == undefined) {
+      window.location.href = "index.html";}
+  </script>
 </head>
 <body>
   <div class="card">
@@ -20,8 +27,90 @@
   <span></span>
   </button>
 
-  <button id="end-btn" class="add-button">End</button>
+  <!-- id="end-btn" -->
+  <button  class="add-button" data-bs-toggle="modal" data-bs-target="#myModal">End</button>
 
+
+  
+  <div class="modal" id="myModal" aria-hidden="true" data-mdb-backdrop="false">
+    <div class="modal-dialog-centered modal-dialog">
+      <div class="modal-content d-flex flex-column align-items-center"> <!-- Add these classes here -->
+        <!-- Modal content goes here -->
+        <div class="modal-header">
+          <h5 class="modal-title fw-bolder">Recall Time</h5>
+          <button type="button" class="btn-close confetti-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <input
+        type="text"
+        class="bg-transparent outline-none border-0 text-center text-4xl md:text-5xl lg:text-5xl py-5 font-bold tracking-widest text-black"
+        id="phoneNum"
+        pattern="[0-9]+"
+        autofocus
+      />
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-md">
+             <button>1</button> 
+            </div>
+            <div class="col-md">
+              <button>2</button>
+            </div>
+            <div class="col-md">
+             <button>3</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-md">
+              <button>4</button>
+            </div>
+            <div class="col-md">
+            <button>5</button>
+            </div>
+            <div class="col-md">
+            <button>6</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-md">
+              <button>7</button>
+            </div>
+            <div class="col-md">
+              <button>8</button>
+            </div>
+            <div class="col-md">
+              <button>9</button>
+            </div>
+          </div>
+        </div>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-md">
+              <button>Backspace</button>
+            </div>
+            <div class="col-md">
+              <button>0</button>
+            </div>
+            <div class="col-md">
+              <button>Submit</button>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    document.getElementsByClassName("confetti-btn")[0].addEventListener("click", () => {
+      confetti();
+    });
+  </script>
 </body>
 <script src="JS/Number.js" type="module"></script>
 </html>
