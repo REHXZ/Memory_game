@@ -18,7 +18,6 @@ index_sign_up_btn.addEventListener("click", function() {
 log_in_btn.addEventListener("click", async function(){
     const av = af.value.trim();
     const av2 = av2_field.value.trim();
-    console.log(av,av2)
     if (av.length == 7 && !isNaN(av)){
         let { data: user, error } = await supabaseclient
         .from('user')
