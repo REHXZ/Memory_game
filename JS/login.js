@@ -3,8 +3,6 @@ const supabaseclient = supabase.createClient(
 	"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml6dWFnbXp1c2N4ZW1taGxpcmxrIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTY5MDQ2NjcsImV4cCI6MjAxMjQ4MDY2N30.596CiB1jVlRRLQlu0IvViUpoy26Bli_IhW_3lcd2-1U"
 );
 
-var id = ''
-
 const af = document.getElementById("admin_no"); //Admin nummber of user
 const av2_field = document.getElementById("Password-field");// Password entered
 
@@ -30,14 +28,12 @@ log_in_btn.addEventListener("click", async function(){
         // Execute the query
         .single(); // Use .single() to retrieve a single record that matches the filter
       // Check for errors
-        console.log(user.password)
       if (av2 !== user.password) {
         var pass = `Incorrect Password or ${av} Admin number`
         console.log('Error:', error ,`\n Or ${pass}`);
         alert.textContent = pass;
       } else {
-        id = av
-        console.log(id)
+        localStorage.setItem("Admin Number", av);
         window.location.href = 'Main.html'
     }
   }

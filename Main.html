@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="Css/Main.css">
   <title>Disciplines</title>
+  <script>
+    const Admin_Number = localStorage.getItem("Admin Number");
+    console.log(Admin_Number);
+    if (Admin_Number == null ||  Admin_Number == undefined) window.location.href = "index.html";
+  </script>
 </head>
 <body>
   <div class="container">
@@ -18,4 +23,5 @@
   </div>
   <img src="images/img-6.png" alt="" class="img">
 </body>
+
 </html>
