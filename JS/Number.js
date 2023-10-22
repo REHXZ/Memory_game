@@ -46,7 +46,7 @@ function AppendPillairs(inputvalue) {
 }
 
 document.getElementById("phoneNum").focus();
-const holding_array = [];
+var holding_array = [];
 var callGridArr = document
   .getElementById("callGrid")
   .querySelectorAll("button");
@@ -69,6 +69,9 @@ for (var button of callGridArr) {
         if  (holding_array[3] == DigitsHolder[0]){
           console.log("Here")
           document.getElementById("phoneNum").value = "";
+          holding_array = [];
+          DigitsHolder.splice(0,1);
+          console.log(DigitsHolder);
         }
         else if (holding_array[3] != DigitsHolder[0]){
           console.log("NIGG")
