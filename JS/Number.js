@@ -4,15 +4,15 @@
 const Admin_Number = localStorage.getItem("Admin Number");
 console.log(Admin_Number)
 const buttonElement = document.getElementById("Next");
-const MemoryPallairs = ["","Gantry","Servicee Staff","Top-up Counter","ATM","Seven-Eleven","Each a Cup","Fuji zerox","Orange Juice","Link Bridge","Security Office / Gantry"];
+const MemoryPallairs = ["","Gantry","Service Staff","Top-up Counter","ATM","Seven-Eleven","Each a Cup","Fuji zerox","Orange Juice","Link Bridge","Security Office / Gantry"];
 // const end = document.getElementById("end-btn")
 
 // end.addEventListener("click", function (){
 //   window.location.href = 'Main.html'
 // })
-
+var score = 0;
 var DigitsHolder = new Array();
-
+ 
 var i = 0;
 buttonElement.addEventListener("click", function() {
   i++;
@@ -70,8 +70,9 @@ for (var button of callGridArr) {
           console.log("Here")
           document.getElementById("phoneNum").value = "";
           holding_array = [];
+          score += 4;
           DigitsHolder.splice(0,1);
-          console.log(DigitsHolder);
+          console.log(DigitsHolder,score);
         }
         else if (holding_array[3] != DigitsHolder[0]){
           console.log("NIGG")

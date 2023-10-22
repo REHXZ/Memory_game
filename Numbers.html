@@ -38,7 +38,7 @@
         <!-- Modal content goes here -->
         <div class="modal-header align-items-center">
           <h5 class="modal-title fw-bolder">Recall Time</h5>
-          <button type="button" class="btn-close confetti-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close confetti-btn" data-bs-dismiss="modal" aria-label="Close" id=""></button>
         </div>
           <div class="container">
             <div class="grow flex flex-col justify-center">
@@ -49,28 +49,35 @@
                 pattern="[0-9]+"
                 autofocus
               />
+
               <div
-                class="grid grid-cols-1 grid-rows-5 text-2xl py-3 px-2 justify-items-center gap-2 items-center"
+                class="grid grid-cols-3 grid-rows-4 text-2xl py-3 px-2 justify-items-center gap-2 items-center"
                 id="callGrid"
               >
-              <button
-                  data-value="1"
-                  class="w-16 h-16 p-2 bg-slate-500/50 hover:bg-slate-500 flex justify-center rounded-tl-lg relative"
-                >
-                  <p class="font-bold">1</p>
-                </button>
-                <button
-                  data-value="2"
-                  class="w-16 h-16 p-2 bg-slate-500/50 hover:bg-slate-500 flex justify-center rounded-full relative"
-                >
-                  <p class="font-bold">2</p>
-                </button>
-                <button
-                  data-value="3"
-                  class="w-16 h-16 p-2 bg-slate-500/50 hover:bg-slate-500 flex justify-center rounded-full relative"
-                >
-                  <p class="font-bold">3</p>
-                </button>
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-6 text-center d-block justify-items-center">
+                      <button
+                          data-value="1"
+                          class="w-16 h-16 p-2 bg-slate-500/50 hover:bg-slate-500 flex justify-center rounded-tl-lg relative"
+                        >
+                          <p class="font-bold">1</p>
+                        </button>
+                        <button
+                          data-value="2"
+                          class="w-16 h-16 p-2 bg-slate-500/50 hover:bg-slate-500 flex justify-center rounded-full relative"
+                        >
+                          <p class="font-bold">2</p>
+                        </button>
+                        <button
+                          data-value="3"
+                          class="w-16 h-16 p-2 bg-slate-500/50 hover:bg-slate-500 flex justify-center rounded-full relative"
+                        >
+                          <p class="font-bold">3</p>
+                        </button>
+                    </div>
+              </div>
+
                 <button
                   data-value="4"
                   class="w-16 h-16 p-2 bg-slate-500/50 hover:bg-slate-500 flex justify-center rounded-full relative"
@@ -107,12 +114,6 @@
                 >
                   <p class="font-bold">9</p>
                 </button>
-                <button
-                  data-value="0"
-                  class="w-16 h-16 p-2 bg-slate-500/50 hover:bg-slate-500 flex justify-center rounded-full relative"
-                >
-                  <p class="font-bold">0</p>
-                </button>
 
                 <button id="backspace"
                 data-value="backspace"
@@ -121,11 +122,22 @@
                 <p class="font-bold">backspace</p>
               </button>
 
+
+                <button
+                  data-value="0"
+                  class="w-16 h-16 p-2 bg-slate-500/50 hover:bg-slate-500 flex justify-center rounded-full relative"
+                >
+                  <p class="font-bold">0</p>
+                </button>
+
+
+
               <button id="Submit"
               class="w-16 h-16 p-2 bg-slate-500/50 hover:bg-slate-500 flex justify-center rounded-full relative"
             >
               <p class="font-bold">Submit</p>
             </button>
+          </div>
 
               </div>
             </div>
