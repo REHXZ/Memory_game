@@ -44,3 +44,46 @@ function AppendPillairs(inputvalue) {
   pallairs.innerHTML = ""
   pallairs.innerHTML += `<p>${inputvalue}</p>`
 }
+
+document.getElementById("phoneNum").focus();
+const holding_array = [];
+var callGridArr = document
+  .getElementById("callGrid")
+  .querySelectorAll("button");
+for (var button of callGridArr) {
+  button.addEventListener("click", (e) => {
+    var buttonHTML = e.target;
+    if (e.target.tagName == "P") {
+      buttonHTML = e.target.parentElement;
+    } else if (e.target.tagName == "I") {
+      return;
+    }
+    if (buttonHTML.id) {
+      return;
+    }
+    document.getElementById("phoneNum").focus();
+    document.getElementById("phoneNum").value += buttonHTML.dataset.value;
+    holding_array.push(document.getElementById("phoneNum").value)
+    console.log(holding_array)
+      if (holding_array.length > 3) {
+        if  (holding_array[3] == DigitsHolder[0]){
+          console.log("Here")
+          document.getElementById("phoneNum").value = "";
+        }
+        else if (holding_array[3] != DigitsHolder[0]){
+          console.log("NIGG")
+        }
+      }
+  });
+}
+
+document.getElementById("backspace").addEventListener("click", () => {
+  document.getElementById("phoneNum").focus();
+  document.getElementById("phoneNum").value = document
+    .getElementById("phoneNum")
+    .value.slice(0, -1);
+    holding_array.pop()
+    console.log(holding_array)
+});
+
+

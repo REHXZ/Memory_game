@@ -31,15 +31,105 @@
   <button  class="add-button" data-bs-toggle="modal" data-bs-target="#myModal">End</button>
 
 
-  
+  <!-- The Modal -->
   <div class="modal" id="myModal" aria-hidden="true" data-mdb-backdrop="false">
     <div class="modal-dialog-centered modal-dialog">
-      <div class="modal-content d-flex flex-column align-items-center"> <!-- Add these classes here -->
+      <div class="modal-content">
         <!-- Modal content goes here -->
-        <div class="modal-header">
+        <div class="modal-header align-items-center">
           <h5 class="modal-title fw-bolder">Recall Time</h5>
           <button type="button" class="btn-close confetti-btn" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
+          <div class="container">
+            <div class="grow flex flex-col justify-center">
+              <input
+                type="text"
+                class="bg-transparent outline-none border-0 text-center text-4xl md:text-5xl lg:text-5xl py-5 font-bold tracking-widest text-black"
+                id="phoneNum"
+                pattern="[0-9]+"
+                autofocus
+              />
+              <div
+                class="grid grid-cols-1 grid-rows-5 text-2xl py-3 px-2 justify-items-center gap-2 items-center"
+                id="callGrid"
+              >
+              <button
+                  data-value="1"
+                  class="w-16 h-16 p-2 bg-slate-500/50 hover:bg-slate-500 flex justify-center rounded-tl-lg relative"
+                >
+                  <p class="font-bold">1</p>
+                </button>
+                <button
+                  data-value="2"
+                  class="w-16 h-16 p-2 bg-slate-500/50 hover:bg-slate-500 flex justify-center rounded-full relative"
+                >
+                  <p class="font-bold">2</p>
+                </button>
+                <button
+                  data-value="3"
+                  class="w-16 h-16 p-2 bg-slate-500/50 hover:bg-slate-500 flex justify-center rounded-full relative"
+                >
+                  <p class="font-bold">3</p>
+                </button>
+                <button
+                  data-value="4"
+                  class="w-16 h-16 p-2 bg-slate-500/50 hover:bg-slate-500 flex justify-center rounded-full relative"
+                >
+                  <p class="font-bold">4</p>
+                </button>
+                <button
+                  data-value="5"
+                  class="w-16 h-16 p-2 bg-slate-500/50 hover:bg-slate-500 flex justify-center rounded-full relative"
+                >
+                  <p class="font-bold">5</p>
+                </button>
+                <button
+                  data-value="6"
+                  class="w-16 h-16 p-2 bg-slate-500/50 hover:bg-slate-500 flex justify-center rounded-full relative"
+                >
+                  <p class="font-bold">6</p>
+                </button>
+                <button
+                  data-value="7"
+                  class="w-16 h-16 p-2 bg-slate-500/50 hover:bg-slate-500 flex justify-center rounded-full relative"
+                >
+                  <p class="font-bold">7</p>
+                </button>
+                <button
+                  data-value="8"
+                  class="w-16 h-16 p-2 bg-slate-500/50 hover:bg-slate-500 flex justify-center rounded-full relative"
+                >
+                  <p class="font-bold">8</p>
+                </button>
+                <button
+                  data-value="9"
+                  class="w-16 h-16 p-2 bg-slate-500/50 hover:bg-slate-500 flex justify-center rounded-full relative"
+                >
+                  <p class="font-bold">9</p>
+                </button>
+                <button
+                  data-value="0"
+                  class="w-16 h-16 p-2 bg-slate-500/50 hover:bg-slate-500 flex justify-center rounded-full relative"
+                >
+                  <p class="font-bold">0</p>
+                </button>
+
+                <button id="backspace"
+                data-value="backspace"
+                class="w-16 h-16 p-2 bg-slate-500/50 hover:bg-slate-500 flex justify-center rounded-full relative"
+              >
+                <p class="font-bold">backspace</p>
+              </button>
+
+              <button id="Submit"
+              class="w-16 h-16 p-2 bg-slate-500/50 hover:bg-slate-500 flex justify-center rounded-full relative"
+            >
+              <p class="font-bold">Submit</p>
+            </button>
+
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
