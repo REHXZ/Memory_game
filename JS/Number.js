@@ -83,7 +83,7 @@ for (var button of callGridArr) {
           }, 500); // Change 1000 to the desired time in milliseconds (1 second in this example)
 
         }
-        else if (holding_array[3] != DigitsHolder[0]){
+        else{
           console.log("wrong for NOW LOLOLOLOLOL")
           const modal_flash = document.getElementById("myModal");
           modal_flash.classList.add("modal_flash_red"); // Add the class to change the background
