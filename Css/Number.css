@@ -74,3 +74,7 @@ body {
   padding: 5px 0px 5px 0px;
   justify-content: center;
 }
+
+.modal_flash{ 
+  background: linear-gradient(135deg, rgba(0, 255, 0, 0.8), rgba(0, 128, 0, 0.2));
+}

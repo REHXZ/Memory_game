@@ -12,11 +12,11 @@ const MemoryPallairs = ["","Gantry","Service Staff","Top-up Counter","ATM","Seve
 // })
 var score = 0;
 var DigitsHolder = new Array();
+console.log(DigitsHolder)
  
 var i = 0;
 buttonElement.addEventListener("click", function() {
   i++;
-  console.log(i,DigitsHolder);
   AppendInput(generateRandom4DigitNumber())
   AppendPillairs(MemoryPallairs[i])
 });
@@ -75,7 +75,7 @@ for (var button of callGridArr) {
           console.log(DigitsHolder,score);
         }
         else if (holding_array[3] != DigitsHolder[0]){
-          console.log("NIGG")
+          console.log("wrong for NOW LOLOLOLOLOL")
         }
       }
   });
@@ -90,4 +90,7 @@ document.getElementById("backspace").addEventListener("click", () => {
     console.log(holding_array)
 });
 
+function green_flash(){
+
+}
 
