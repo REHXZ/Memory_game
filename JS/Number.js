@@ -2,6 +2,7 @@
 
 // console.log(id)
 const Admin_Number = localStorage.getItem("Admin Number");
+const modal_flash = document.querySelector("modal")
 console.log(Admin_Number)
 const buttonElement = document.getElementById("Next");
 const MemoryPallairs = ["","Gantry","Service Staff","Top-up Counter","ATM","Seven-Eleven","Each a Cup","Fuji zerox","Orange Juice","Link Bridge","Security Office / Gantry"];
@@ -73,9 +74,24 @@ for (var button of callGridArr) {
           score += 4;
           DigitsHolder.splice(0,1);
           console.log(DigitsHolder,score);
+          const modal_flash = document.getElementById("myModal");
+          modal_flash.classList.add("modal_flash"); // Add the class to change the background
+
+          // To remove the class and revert to the original background color after a certain time, you can use a setTimeout function.
+          setTimeout(() => {
+            modal_flash.classList.remove("modal_flash");
+          }, 500); // Change 1000 to the desired time in milliseconds (1 second in this example)
+
         }
         else if (holding_array[3] != DigitsHolder[0]){
           console.log("wrong for NOW LOLOLOLOLOL")
+          const modal_flash = document.getElementById("myModal");
+          modal_flash.classList.add("modal_flash_red"); // Add the class to change the background
+
+          // To remove the class and revert to the original background color after a certain time, you can use a setTimeout function.
+          setTimeout(() => {
+            modal_flash.classList.remove("modal_flash_red");
+          }, 500); // Change 1000 to the desired time in milliseconds (1 second in this example)
         }
       }
   });
