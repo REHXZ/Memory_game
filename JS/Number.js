@@ -1,17 +1,17 @@
-// import { id } from './login.js'
 
-// console.log(id)
 const Admin_Number = localStorage.getItem("Admin Number");
 const modal_flash = document.querySelector("modal")
 console.log(Admin_Number)
 const buttonElement = document.getElementById("Next");
 const MemoryPallairs = ["","Gantry","Service Staff","Top-up Counter","ATM","Seven-Eleven","Each a Cup","Fuji zerox","Orange Juice","Link Bridge","Security Office / Gantry"];
+
 // const end = document.getElementById("end-btn")
 
 // end.addEventListener("click", function (){
 //   window.location.href = 'Main.html'
 // })
-var score = 0;
+
+var scoreinput = 0;
 var DigitsHolder = new Array();
 console.log(DigitsHolder)
  
@@ -40,6 +40,13 @@ function AppendInput(inputvalue) {
   Digit.innerHTML = ""
   Digit.innerHTML += `<p>${inputvalue}</p>`
 }
+
+function Appendscore(scorevalue) {
+  console.log(score)
+  score.innerHTML = ""
+  score.innerHTML += `<p>${scorevalue}</p>`
+}
+
 
 function AppendPillairs(inputvalue) {
   pallairs.innerHTML = ""
@@ -71,9 +78,9 @@ for (var button of callGridArr) {
           console.log("Here")
           document.getElementById("phoneNum").value = "";
           holding_array = [];
-          score += 4;
+          scoreinput += 4;
           DigitsHolder.splice(0,1);
-          console.log(DigitsHolder,score);
+          console.log(DigitsHolder,scoreinput);
           const modal_flash = document.getElementById("myModal");
           modal_flash.classList.add("modal_flash"); // Add the class to change the background
 
@@ -81,7 +88,7 @@ for (var button of callGridArr) {
           setTimeout(() => {
             modal_flash.classList.remove("modal_flash");
           }, 500); // Change 1000 to the desired time in milliseconds (1 second in this example)
-
+          Appendscore(scoreinput);
         }
         else{
           console.log("wrong for NOW LOLOLOLOLOL")
