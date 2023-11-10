@@ -38,17 +38,22 @@
         <!-- Modal content goes here -->
         <div class="modal-header align-items-center">
           <h5 class="modal-title fw-bolder">Recall Time</h5>
-          <button type="button" class="btn-close confetti-btn" data-bs-dismiss="modal" aria-label="Close" id=""></button>
+          <button type="button" class="btn-close confetti-btn" data-bs-dismiss="modal" aria-label="Close" id="end-button"></button>
         </div>
           <div class="container">
-            <div class="grow flex flex-col justify-center">
-              <input
-                type="text"
-                class="bg-transparent outline-none border-0 text-center text-4xl md:text-5xl lg:text-5xl py-5 font-bold tracking-widest text-black"
-                id="phoneNum"
-                pattern="[0-9]+"
-                autofocus
-              />
+            <div class="grow container justify-content-center align-items-center">
+              <div class="container pt-4">
+                  <div class="d-flex justify-content-center">
+                      <input
+                      type="text"
+                      class="bg-transparent outline-none border-0 text-center text-4xl md:text-5xl lg:text-5xl py-5 font-bold tracking-widest text-black fs-4"
+                      id="phoneNum"
+                      pattern="[0-9]+"
+                      autofocus
+                    />
+                </div>
+              </div>
+              <p id="phoneNum"></p>
               <p class="Number" id="score">Score</p>
               <div
                 class="grid grid-cols-3 grid-rows-4 text-2xl py-3 px-2 justify-items-center gap-2 items-center"

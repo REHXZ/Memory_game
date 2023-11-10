@@ -4,12 +4,7 @@ const modal_flash = document.querySelector("modal")
 console.log(Admin_Number)
 const buttonElement = document.getElementById("Next");
 const MemoryPallairs = ["","Gantry","Service Staff","Top-up Counter","ATM","Seven-Eleven","Each a Cup","Fuji zerox","Orange Juice","Link Bridge","Security Office / Gantry"];
-
-// const end = document.getElementById("end-btn")
-
-// end.addEventListener("click", function (){
-//   window.location.href = 'Main.html'
-// })
+const end = document.getElementById("end-button")
 
 var scoreinput = 0;
 var DigitsHolder = new Array();
@@ -59,6 +54,9 @@ var callGridArr = document
   .getElementById("callGrid")
   .querySelectorAll("button");
 for (var button of callGridArr) {
+  end.addEventListener("click", function (){
+    window.location.href = 'Main.html'
+  })
   button.addEventListener("click", (e) => {
     var buttonHTML = e.target;
     if (e.target.tagName == "P") {
@@ -91,7 +89,7 @@ for (var button of callGridArr) {
           Appendscore(scoreinput);
         }
         else{
-          console.log("wrong for NOW LOLOLOLOLOL")
+          console.log("wrong")
           const modal_flash = document.getElementById("myModal");
           modal_flash.classList.add("modal_flash_red"); // Add the class to change the background
 
