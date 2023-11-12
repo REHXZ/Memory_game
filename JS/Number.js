@@ -1,4 +1,3 @@
-
 const Admin_Number = localStorage.getItem("Admin Number");
 const modal_flash = document.querySelector("modal")
 console.log(Admin_Number)
@@ -110,8 +109,3 @@ document.getElementById("backspace").addEventListener("click", () => {
     holding_array.pop()
     console.log(holding_array)
 });
-
-function green_flash(){
-
-}
-
