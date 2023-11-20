@@ -22,30 +22,31 @@
   <div class="container d-flex justify-content-center">
     <div class="d-flex align-items-center">
       <div class="container text-wrap">
-        <p id="number" class="text-break fs-5 text-light">Generate the number</p>
+        <p id="number" class="text-break text-wrap fs-5 text-light text-center">Generate the number</p>
       </div>
     </div>
   </div>  
 
   <script>
-      const button = document.getElementById("sqr");
-      const n = document.getElementById("n");
+    const button = document.getElementById("sqr");
+    const n = document.getElementById("n");
 
-      button.addEventListener("click", () => {
-        Big.DP = 2000;
-        var sqrt_2 = " "; // Get the value of the input field
-        sqrt_2 += new Big(n.value).sqrt().toString();
-        AppendInput(sqrt_2);
-      });
+    button.addEventListener("click", () => {
+      Big.DP = 2000;
+      var sqrt_2 = new Big(n.value).sqrt().toString();
+      console.log(typeof sqrt_2);
+      AppendInput(sqrt_2);
+    });
 
-      function AppendInput(inputvalue) {
-        const number = document.getElementById("number");
-        number.innerHTML = "";
-
-        // Split the input string into groups of 4 characters with 4 spaces in between
-        const formattedString = inputvalue.match(/.{1,4}/g).join(" &nbsp;&nbsp; ");
-        number.innerHTML += `<p>${formattedString}</p>`;
-      }
+    function AppendInput(inputvalue) {
+      const number = document.getElementById("number");
+      number.innerHTML = "";
+      formattedString = inputvalue.replace(/^\./, "")
+      formattedString = formattedString.match(/\d{1,10}/g);
+      formattedString = formattedString.join("&nbsp;&nbsp;  ");
+      number.innerHTML += `<p>${formattedString}</p>`;
+    }
   </script>
 </body>
 </html>
+ 
