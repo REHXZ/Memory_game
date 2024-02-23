@@ -32,7 +32,7 @@
     const n = document.getElementById("n");
 
     button.addEventListener("click", () => {
-      Big.DP = 2000;
+      Big.DP = 1999;
       var sqrt_2 = new Big(n.value).sqrt().toString();
       console.log(typeof sqrt_2);
       AppendInput(sqrt_2);
@@ -42,8 +42,10 @@
       const number = document.getElementById("number");
       number.innerHTML = "";
       formattedString = inputvalue.replace(/^\./, "")
+      formattedString = formattedString.split('.').join('');
+      formattedString = formattedString.split(' ').join('');
       formattedString = formattedString.match(/\d{1,10}/g);
-      formattedString = formattedString.join("&nbsp;&nbsp;  ");
+      formattedString = formattedString.join("&nbsp;&nbsp;&nbsp;  ");
       number.innerHTML += `<p>${formattedString}</p>`;
     }
   </script>
